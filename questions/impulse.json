@@ -1,0 +1,32 @@
+{
+	"questions": [
+		{
+			"question": "A car is traveling at $[v] \\text{km}/\\text{h}$, at one point it slows down and stops for a red light with an acceleration of $[a] \\text{m}/\\text{s}^2$. The car has a mass of $[m] \\text{kg}$, find the impulse that was applied to the car.",
+			"variables": {
+				"v": {
+					"type": "float",
+					"range": [30.0, 120.0],
+					"round": -1
+				},
+				"a": {
+					"type": "float",
+					"range": [-10.0, -1.0],
+					"round": -1
+				},
+				"m": {
+					"type": "int",
+					"range": [800, 2000]
+				}
+			},
+			"intermediates": {
+				"impulse": {
+					"formula": "m * v / 3.6",
+					"dependencies": ["m", "v"],
+					"round": -2
+				}
+			},
+			"answer": "The impulse applied to the car is [impulse] Ns.",
+			"solution": "Impulse = mass * velocity / 3.6 = [m] * [v] / 3.6 = [impulse] Ns."
+		}
+	]
+}
